@@ -1,0 +1,1682 @@
+:root {
+    --text-color: #454545;
+    --sub-text-color: #686868;
+    --bg-gray-color: #f5f7fa;
+    --primary-color: #8b0065;
+    --btn-bg: #e88feb;
+    --point-blue: #5AA4F1;
+    --point-green: #12A5AC;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: 'Noto Sans KR', helvetica, sans-serif;
+    -webkit-text-size-adjust: none;
+}
+
+.container {
+    max-width: 1200px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 300;
+    margin: 0 auto;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-row-reverse {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+}
+
+ul {
+    list-style: none;
+    color: var(--text-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--sub-text-color);
+}
+
+h1 {
+    color: var(--text-color);
+    font-size: 28px;
+    margin: 10px 0;
+}
+
+h3 {
+    color: var(--sub-text-color);
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+p {
+    color: var(--sub-text-color);
+    line-height: 1.4em;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+.btn {
+    display: inline-block;
+    background: #383838;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 30px;
+    margin-top: 20px;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+/* Navbar */
+#navbar {
+    height: 80px;
+    position: relative;
+    border-bottom: 1px solid rgb(228, 228, 228);
+}
+
+#navbar .navbar {
+    height: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+    /* Quickmenu */
+.side-quick-menu {
+    width: 150px;
+    background: #F5F5F5;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 111;
+}
+
+.side-quick-menu .quick-menu-title {
+    padding: 15px 0 10px 0;
+    width: 100%;
+    background: var(--point-blue);
+}
+
+.side-quick-menu .quick-menu-operation {
+    background: var(--point-blue);
+    padding: 10px;
+    width: 100%;
+}
+
+.side-quick-menu .quick-menu-operation .operation {
+    margin: 5px 0;
+}
+
+.side-quick-menu a {
+    width: 100%;
+}
+
+.side-quick-menu .quick-menu-operation p {
+    color: #fff;
+}
+
+.side-quick-menu .quick-menu-title h3 {
+    color: #fff;
+    text-align: center;
+}
+
+.side-quick-menu .quick-menu-card {
+    padding: 10px 0;
+    margin-top: 10px;
+    width: 100%;
+    border-bottom: 1px solid #d3d3d3;
+}
+
+
+.quick-menu-card .quick-menu-img {
+    width: 50px;
+}
+
+.quick-menu-card .quick-menu-btn p {
+    margin-top: 20px;
+    color: #000;
+}
+    /* End Quickmenu */
+
+.main-logo {
+    height: 40px;
+    width: 250px;
+}
+
+.nav-menu {
+    height: 100%;
+}
+
+.nav-menu ul {
+    font-weight: 500;
+    letter-spacing: -0.03em;
+    font-size: 18px;
+}
+
+.nav-menu ul li {
+    position: relative;
+}
+
+.nav-menu ul li a {
+    display: inline-block;
+    padding: 0 50px;
+    width: 100%;
+}
+
+/* End Navbar */
+
+/* Main Banner */
+.main-banner {
+    width: 100%;
+    max-height: 700px;
+}
+
+.main-banner-slide {
+    height: 100%;
+}
+
+.banner-img {
+    width: 100%;
+    min-height: 100%;
+    /* object-fit: cover; */
+}
+
+/* End Main Banner */
+
+/* Main Notice */
+#main-notice {
+    height: 100%;
+}
+
+#main-notice .main-notice {
+    width: 100%;
+    height: 100%;
+}
+
+.main-notice-grid {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    gap: 20px;
+    max-width: 100%;
+    height: 740px;
+    padding: 100px 0;
+}
+
+.main-notice-grid .main-notice-title {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-notice-grid .main-notice-title h1 {
+    text-align: center;
+    position: relative;
+}
+
+.main-notice-grid .main-notice-title h1 .title-liner {
+    position: absolute;
+    background: rgb(255, 252, 56);
+}
+
+.main-notice-card {
+    overflow: hidden;
+    height: 550px;
+    border: 1px solid #ddd;
+    background: #fff;
+    justify-content: flex-start;
+}
+
+.main-notice-card .main-notice-card-img {
+    max-height: 50%;
+    overflow: hidden;
+}
+
+.main-notice-card .main-notice-card-content {
+    max-height: 50%;
+    padding: 10px 20px;
+}
+
+.main-notice-card .main-notice-card-content h1 {
+    font-size: 20px;
+}
+
+.main-notice-card .main-notice-card-content a {
+    margin: 10px 0;
+    color: #8b0065;
+}
+
+.main-notice-card .main-notice-card-content .btn {
+    margin-top: 30px;
+}
+
+.main-notice-grid .main-notice-card .cutoff-text {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* End Main Notice */
+
+/* Notice Board */
+#noticeboard {
+    
+}
+
+#noticeboard .noticeboard {
+    height: 100%;
+}
+
+.noticeboard .noticeboard-banner {
+    margin-top: 30px;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 300px;
+    width: 100%;
+    background: url('../public/img/consult_banner.jpg');
+    background-size: cover;
+}
+
+.noticeboard .noticeboard-board {
+    width: 100%;
+    height: 100%;
+    margin-top: 30px;
+    background: #fcfcfc;
+    justify-content: flex-start;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+
+.noticeboard-board .noticeboard-board-row {
+    width: 100%;
+    height: 50px;
+    justify-content: flex-start;
+    border-bottom: 1px solid #b4b4b4;
+}
+
+.noticeboard-board .noticeboard-board-row .post-no {
+    width: 10%;
+    text-align: left;
+    padding: 0 30px;
+}
+
+.noticeboard-board .noticeboard-board-row .post-category {
+    width: 10%;
+}
+
+.noticeboard-board .noticeboard-board-row .post-title {
+    width: 60%;
+    text-align: left;
+    font-weight: bold;
+}
+
+.noticeboard-board .noticeboard-board-row .post-writer {
+    width: 10%;
+}
+
+.noticeboard-board .noticeboard-board-row .post-date {
+    width: 10%;
+    text-align: left;
+}
+
+
+.notice-detail-wrapper .notice-detail-title {
+    width: 100%;
+    height: 100%;
+}
+
+.notice-detail-wrapper .notice-detail-title .notice-detail-title-1,
+.notice-detail-wrapper .notice-detail-title .notice-detail-title-2 {
+    width: 100%;
+    height: 100%;
+    justify-content: flex-start;
+    border-bottom: 1px solid #000;
+}
+
+.notice-detail-wrapper .notice-detail-title .notice-detail-title-1 .title,
+.notice-detail-wrapper .notice-detail-title .notice-detail-title-2 .writer,
+.notice-detail-wrapper .notice-detail-title .notice-detail-title-2 .date {
+    width: 10%;
+    height: 100%;
+    display: inline-block;
+    padding: 5px 0;
+    text-align: center;
+    background: #f7f7f7;
+    color: var(--text-color);
+}
+
+.notice-detail-wrapper .notice-detail-title .notice-detail-title-1 .title-text {
+    width: 90%;
+    padding: 5px 0;
+    margin-left: 20px;
+}
+
+.notice-detail-wrapper .notice-detail-title .notice-detail-title-2 .writer-text {
+    width: 70%;
+    padding: 5px 0;
+    margin-left: 20px;
+}
+
+.notice-detail-wrapper .notice-detail-title .notice-detail-title-2 .date-text {
+    width: 10%;
+    text-align: center;
+}
+
+.notice-detail-content {
+    width: 100%;
+    align-items: flex-start;
+    padding: 30px 0;
+}
+
+.notice-detail-content .notice-detail-img {
+    width: 500px;
+    margin-bottom: 30px;
+}
+
+.notice-detail-content p {
+    width: 50%;
+}
+
+    /* Detail */
+
+.notice-detail-wrapper {
+    min-height: 300px;
+    width: 100%;
+    /* background: #fcfcfc; */
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    margin-top: 30px;
+    justify-content: flex-start;
+}
+/* End Notice Board */
+
+/* Section Banner */
+#section-banner {
+    /* background: var(--bg-gray-color); */
+    padding: 100px 0;
+    margin-top: 50px;
+}
+
+#section-banner .section-banner {
+    height: 100%;
+}
+
+#section-banner .section-banner h1 {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 20px;
+}
+
+#section-banner .section-banner .image-container {
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.title-liner {
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    background: rgba(255, 62, 62, 0.6);
+    height: 8px;
+    border-radius: 5px;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.quick-menu {
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.quick-menu > * {
+    flex-basis: 100%;
+}
+
+.quick-menu .quick-menu-card {
+    align-items: flex-start;
+}
+
+.quick-menu .quick-menu-card .quick-menu-card-icon {
+    margin: 30px;
+}
+
+.quick-menu .quick-menu-card .quick-menu-card-icon img {
+    width: 60px;
+}
+
+.quick-menu .quick-menu-card .quick-menu-card-content .btn {
+    margin-top: 0;
+}
+
+/* End Section Banner */
+
+/* School Rec Section */
+#school-rec {
+    background: var(--bg-gray-color);
+    padding: 100px 0 150px 0;
+    margin-bottom: 50px;
+    /* margin-bottom: 50px; */
+}
+
+#school-rec .school-rec {
+    justify-content: flex-start;
+    height: 100%;
+}
+
+#school-rec .school-rec h1 {
+    position: relative;
+    z-index: 1;
+}
+
+#school-rec .school-rec h1 .title-liner {
+    background: rgb(71, 156, 253);
+    z-index: -1;
+}
+
+#school-rec .school-rec .school-rec-tab {
+    width: 100%;
+    height: 100%;
+}
+
+.tab-content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 40px;
+    max-width: 100%;
+    height: 100%;
+}
+
+.tab-content-grid .tab-content-card {
+    align-items: flex-start;
+    width: 100%;
+}
+
+.tab-content-grid .tab-content-card .tab-content-card-img {
+    width: 100%;
+}
+
+.tab-content-grid .tab-content-card .tab-content-card-content {
+    background: #fff;
+    width: 100%;
+    padding: 0 10px 20px 10px;
+}
+
+.tab-content-grid .tab-content-card .tab-content-card-content h1 {
+    font-size: 20px;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.tab-content-grid .tab-content-card .tab-content-card-content h3 {
+    font-size: 14px;
+    height: 40px;
+    color: var(--sub-text-color);
+    border-top: 1px solid var(--sub-text-color);
+    text-align: center;
+}
+
+.tab-content-grid .tab-content-card .tab-content-card-content a {
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+}
+
+/* End School Rec Section */
+
+/* School Detail Page */
+#schooldetailpage .schooldetailpage {
+    height: 100%;
+    width: 100%;
+    padding: 50px 0;
+}
+
+.schooldetailpage .schooldetailpage-title {
+    margin-top: 30px;
+}
+
+.schooldetailpage .schooldetailpage-title h1 {
+    width: 100%;
+    text-align: center;
+}
+
+.schooldetailpage .schooldetailpage-banner {
+    max-width: 600px;
+    max-height: 250px;
+    overflow: hidden;
+}
+
+.schooldetailpage .schooldetailpage-banner img {
+    object-fit: cover;
+    height: 100%;
+}
+
+.schooldetailpage .schooldetailpage-video {
+    width: 600px;
+    height: 250px;
+    margin: 30px 0;
+}
+
+.schooldetailpage .schooldetailpage-intro {
+    margin: 30px 10px 0 10px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 1px 1px 10px #e4e4e4;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.schooldetailpage .schooldetailpage-intro p {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.schooldetailpage .schooldetailpage-video iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.schooldetailpage .flex-row {
+    width: 100%;
+}
+
+.schooldetailpage .schooldetailpage-card-wrapper {
+    width: 100%;
+    justify-content: space-around;
+}
+
+.schooldetailpage-card-wrapper .schooldetailpage-card {
+    width: 100%;
+    border-radius: 10px;
+    margin: 20px;
+    box-shadow: 1px 1px 10px #e4e4e4;
+}
+
+.schooldetailpage-card-wrapper .schooldetailpage-card img {
+    margin: 10px 0;
+}
+/* End School Detail Page */
+
+/* Tab Styling */
+.react-tabs {
+    -webkit-tap-highlight-color: transparent;
+    margin-top: 50px;
+}
+
+.react-tabs__tab-list {
+    border-bottom: 1px solid #ccc;
+    margin: 0 0 10px;
+    padding: 0;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.react-tabs__tab-list li {
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+}
+
+.react-tabs__tab {
+    display: inline-block;
+    border: 1px solid transparent;
+    border-bottom: none;
+    bottom: -1px;
+    position: relative;
+    list-style: none;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+.react-tabs__tab--selected {
+    background: rgb(71, 156, 253);
+    border-color: rgb(71, 156, 253);
+    color: #fff;
+    border-radius: 5px 5px 0 0;
+    transition: 0.5s ease;
+    transition-property: background-color;
+}
+
+.react-tabs__tab--disabled {
+    color: GrayText;
+    cursor: default;
+}
+
+.react-tabs__tab:focus {
+    outline: none;
+}
+
+.react-tabs__tab:focus:after {
+    content: '';
+    position: absolute;
+    height: 5px;
+    left: -4px;
+    right: -4px;
+    bottom: -5px;
+    background: #fff;
+}
+
+.react-tabs__tab-panel {
+    display: none;
+    /* padding: 50px; */
+    /* background: red; */
+}
+
+.react-tabs__tab-panel--selected {
+    display: block;
+}
+/* End Tab Styling */
+
+/* Location Section */
+#location-section {
+    padding: 100px 0;
+}
+
+#location-section .location-section {
+    height: 100%;
+}
+
+#location-section .location-section h1 {
+    position: relative;
+    z-index: 1;
+}
+
+#location-section .location-section .title-liner {
+    background: #12a5ac;
+    z-index: -1;
+}
+
+.location-section-wrapper .location-card {
+    margin: 10px;
+    border-radius: 10px;
+    padding: 20px;
+    background: #12a5ac;
+}
+
+.location-section-wrapper .location-card-img {
+    height: 400px;
+    overflow: hidden;
+}
+
+.location-section-wrapper .location-card-content {
+    text-align: center;
+}
+
+.location-section-wrapper .location-card-content h1,
+.location-section-wrapper .location-card-content p {
+    color: #fff;
+}
+/* End Location Section */
+
+/* Small Banner */
+.small-banner {
+    width: 100%;
+    height: 200px;
+    border-radius: 15px;
+}
+/* End Small Banner */
+
+/* Footer */
+#footer {
+    margin: 50px 0 0 0;
+}
+
+#footer .footer {
+    height: 100%;
+    padding: 50px 50px;
+}
+
+.footer .footer-sns-row {
+    height: 100%;
+    width: 100%;
+}
+
+.footer .footer-sns-wrapper {
+    height: 100%;
+    margin: 0 25px;
+    justify-content: flex-start;
+}
+
+.footer .footer-sns-title h3 {
+    font-size: 16px;
+    text-align: center;
+}
+
+.footer .footer-sns-icon {
+    margin-bottom: 20px;
+}
+
+.footer .footer-sns-icon img {
+    width: 70px;
+}
+
+#footer .footer-content {
+    width: 100%;
+    height: 100%;
+    background: #222327;
+    padding: 50px 0;
+}
+
+#footer .footer-content .footer-logo {
+    width: 200px;
+    margin: 0 50px;
+}
+
+#footer .footer-content .footer-text h3 {
+    color: #fff;
+}
+/* End Footer */
+
+/* Singmate Home */
+
+#singmatepage .singmatepage {
+    justify-content: flex-start;
+    padding: 30px 0;
+    height: 100%;
+}
+
+.singmatepage-banner {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.singmatepage-banner img {
+    height: 100%;
+}
+
+.singmatepage-intro {
+    margin-bottom: 50px;
+}
+
+.singmatepage-intro .flex-row,
+.singmatepage-intro .flex-row-reverse {
+    height: 350px;
+    overflow: hidden;
+}
+
+.singmatepage-intro .singmate-intro-img,
+.singmatepage-intro .singmate-intro-content {
+    width: 50%;
+    height: 100%;
+}
+
+.singmatepage-intro .singmate-intro-img img {
+    height: 100%;
+}
+
+.singmatepage-intro .singmate-intro-content {
+    padding: 50px;
+    height: 100%;
+    justify-content: flex-start;
+}
+
+.singmatepage-intro .singmate-intro-content p {
+    margin-top: 10px;
+    text-align: left;
+}
+
+.singmatepage-intro .singmate-intro-content h1 {
+    position: relative;
+}
+
+.singmatepage-intro .flex-row-reverse h1 .title-liner {
+    background: var(--point-blue);
+}
+
+.singmatepage-intro .flex-row:last-child h1 .title-liner {
+    background: var(--btn-bg);
+}
+
+/* End Singmate Home */
+
+/* Early Uhak Page */
+#earlyuhakpage {
+    margin-top: 10px;
+}
+
+#earlyuhakpage .earlyuhakpage {
+    height: 100%;
+}
+
+#earlyuhakpage .earlyuhakpage .earlyuhakpage-content {
+    margin-bottom: 50px;
+}
+
+#earlyuhakpage .earlyuhakpage .earlyuhakpage-content p {
+    width: 50%;
+    margin-top: 10px;
+}
+
+.earlyuhakpage .earlyuhak-banner {
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 30px 0;
+}
+
+.earlyuhakpage .earlyuhak-section-content {
+    padding: 30px;
+}
+
+.earlyuhakpage .earlyuhak-section-content h1 {
+    position: relative;
+}
+
+.earlyuhakpage .earlyuhak-section-content h3 {
+    margin-bottom: 10px;
+}
+
+.earlyuhakpage .earlyuhak-section-content .flex-row {
+    height: 100%;
+}
+
+.earlyuhakpage .earlyuhak-section-content .earlyuhak-card {
+    width: 25%;
+    height: 250px;
+    padding: 15px;
+    justify-content: flex-start;
+    box-shadow: 1px 1px 10px #e4e4e4;
+    border-radius: 10px;
+    background: #fff;
+    margin: 0 2px;
+}
+
+.earlyuhakpage .earlyuhak-section-content .earlyuhak-card .earlyuhak-card-img {
+    margin: 15px 0;
+    background: rgb(0, 0, 0);
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.earlyuhakpage .earlyuhak-section-content .earlyuhak-card {
+    margin-top: 30px;
+}
+
+.earlyuhakpage .earlyuhak-section-content .earlyuhak-card h3,
+.earlyuhakpage .earlyuhak-section-content .earlyuhak-card p {
+    text-align: center;
+}
+
+/* End Early Uhak Page */
+
+/* University Page */
+#universitypage .universitypage {
+    height: 100%;
+}
+
+#universitypage .universitypage .universitypage-banner {
+    margin-top: 30px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#universitypage .universitypage .universitypage-content {
+    margin-top: 50px;
+    height: 100%;
+}
+
+#universitypage .universitypage .universitypage-content h1 {
+    text-align: center;
+}
+
+#universitypage .universitypage .universitypage-content h3 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#universitypage .universitypage .universitypage-content > p {
+    width: 50%;
+    margin-top: 10px;
+}
+
+.universitypage-content .private-uni-card-wrapper {
+    margin: 30px 0 50px 0;
+    height: 100%;
+    align-items: flex-start;
+    
+}
+
+.universitypage-content .private-uni-card-wrapper .private-uni-card {
+    width: calc(100%/3);
+    margin: 0 20px;
+    height: 250px;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-radius: 20px;
+    box-shadow: 1px 1px 10px #e4e4e4;
+    padding: 30px;
+}
+
+.private-uni-card-wrapper .private-uni-card .private-uni-card-title {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.private-uni-card-wrapper .private-uni-card .private-uni-card-title h3 {
+    color: var(--point-blue);
+}
+
+.private-uni-card-wrapper .private-uni-card .private-uni-card-title img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+
+/* End University Page */
+
+/* Language Course Page */
+#languagecoursepage .languagecoursepage {
+    height: 100%;
+    margin-bottom: 50px;
+}
+
+.languagecoursepage .languagecoursepage-banner {
+    height: 100%;
+    margin-top: 30px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.languagecoursepage .dimension-row {
+    margin-top: 50px;
+}
+
+.languagecoursepage .dimension-row .dimension-img {
+    width: 50%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.languagecoursepage .dimension-row .dimension-content {
+    width: 50%;
+    padding: 50px;
+}
+
+
+/* End Language Course Page */
+
+/* Visit Page */
+#visitsection { 
+    background: #12A5AC;
+}
+
+#visitsection .visitsection {
+    justify-content: flex-start;
+    padding: 50px 0;
+    height: 100%;
+}
+
+#visitsection .visitsection .form-banner {
+    width: 100%;
+}
+
+#visitsection .form-wrapper {
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 100px;
+    padding: 20px 50px;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.visitsection .form-title {
+    background: #fff;
+    padding: 0 50px;
+    margin-top: 50px;
+    border-radius: 30px;
+}
+
+
+.form-wrapper .form-row {
+    align-items: flex-start;
+    margin: 5px 0;
+    width: 100%;
+}
+
+.form-wrapper .form-row label {
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--text-color);
+    margin-left: 2px;
+}
+
+.form-wrapper .form-row input {
+    height: 40px;
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+}
+
+.form-wrapper .form-row input:focus,
+.form-wrapper .form-row textarea:focus {
+    outline: none !important;
+    border: 2px solid #12A5AC;
+    border-radius: 5px;
+}
+
+.form-wrapper .form-row textarea {
+    width: 100%;
+    height: 250px;
+    resize: none;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+}
+
+.form-wrapper form .parent-info,
+.form-wrapper form .student-info {
+    width: 100%;
+    align-items: flex-start;
+}
+
+.form-wrapper form .parent-info {
+    padding-bottom: 30px;
+
+}
+
+.form-wrapper form .student-info {
+    padding-top: 20px;
+    border-top: 1px solid #d8d8d8;
+}
+
+.form-wrapper form .parent-info h1,
+.form-wrapper form .student-info h1 {
+    position: relative;
+    z-index: 2;
+}
+
+.form-wrapper form .parent-info h1 .title-liner
+.form-wrapper form .student-info h1 .title-liner {
+    position: absolute;
+    z-index: -11;
+}
+
+.form-button {
+    margin-top: 50px;
+}
+
+.form-button button {
+    width: 40%;
+    background: #12A5AC;
+    border: none;
+    cursor: pointer;
+}
+/* End Visit Page */
+
+
+
+
+
+
+
+
+
+
+/* Mobile */
+@media only screen and (max-width: 800px) {
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    .container {
+        max-width: 100%;
+    }
+    /* Navbar */
+    #navbar {
+        height: 120px;
+        padding: 30px 0;
+    }
+
+    #navbar .navbar {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    #navbar .navbar .main-logo {
+        padding: 0 50px;
+        margin-bottom: 10px;
+        height: 30px;
+        width: 100%;
+    }
+
+    #navbar .navbar .nav-menu ul li a {
+        font-size: 16px;
+        width: 100%;
+        padding: 0;
+        margin: 0 10px;
+    }
+
+    .side-quick-menu {
+        flex-direction: row;
+        width: 100%;
+        height: 100px;
+        position: fixed;
+        top: unset;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .quick-menu-card {
+        border-bottom: none;
+    }
+
+    .quick-menu-card .quick-menu-img {
+        width: 45px;
+    }
+
+    .quick-menu-card .quick-menu-btn p {
+        font-size: 14px;
+        width: 100%;
+        margin-top: 12px;
+    }
+
+    .side-quick-menu .quick-menu-title,
+    .side-quick-menu .quick-menu-operation {
+        display: none;
+    }
+
+    /* End Navbar */
+
+    /* MainBanner */
+    .main-banner {
+        height: 300px;
+    }
+
+    .main-banner-slide img {
+        object-fit: cover;
+    }
+    /* End MainBanner */
+
+    /* Main Notice */
+    .main-notice-grid {
+        padding: 40px 10px;
+        margin-bottom: 80px;
+        gap: 10px;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .main-notice-grid .main-notice-title {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+
+    .main-notice-grid .main-notice-title h1 {
+        font-size: 20px;
+    }
+
+    .main-notice-grid .main-notice-title p {
+        font-size: 14px;
+    }
+
+    .main-notice-grid .main-notice-title .btn {
+        font-size: 12px;
+    }
+
+    .main-notice-card {
+        height: 350px;
+        justify-content: flex-start;
+    }
+
+    .main-notice-card .main-notice-card-img {
+        max-height: 50%;
+    }
+
+    .main-notice-card .main-notice-card-content {
+        max-height: 50%;
+        padding: 5px 10px;
+    }
+
+    .main-notice-card .main-notice-card-content h1 {
+        font-size: 14px;
+    }
+
+    .main-notice-card .main-notice-card-content p {
+        font-size: 13px;
+    }
+
+    .main-notice-card .main-notice-card-content .btn {
+        margin-top: 5px;
+        font-size: 10px;
+    }
+
+    .main-notice-grid .main-notice-card .cutoff-text {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    /* End Main Notice */
+
+    /* Notice Board Mobile */
+    .noticeboard .noticeboard-banner {
+        height: 180px;
+        border-radius: 0;
+    }
+
+    .noticeboard-board .noticeboard-board-row p{
+        font-size: 14px;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+    }
+
+    .noticeboard-board .noticeboard-board-row .post-no {
+        width: 5%;
+        padding: 0 5px;
+        font-size: 12px;
+    }
+
+    .noticeboard-board .noticeboard-board-row .post-category {
+        width: 20%;
+        font-size: 12px;
+    }
+
+    .noticeboard-board .noticeboard-board-row .post-title {
+        width: 50%;
+        margin-left: 5px;
+    }
+
+    .noticeboard-board .noticeboard-board-row .post-writer {
+        width: 15%;
+        font-size: 12px;
+    }
+
+    .noticeboard-board .noticeboard-board-row .post-date {
+        font-size: 12px;
+    }
+
+    .noticeboard-board .noticeboard-board-row .post-date {
+        width: 20%;
+    }
+
+    .notice-detail-wrapper .notice-detail-title .notice-detail-title-1 .title,
+    .notice-detail-wrapper .notice-detail-title .notice-detail-title-2 .writer,
+    .notice-detail-wrapper .notice-detail-title .notice-detail-title-2 .date {
+        width: 20%;
+        padding: 3px 0;
+    }
+
+    .notice-detail-wrapper .notice-detail-title .notice-detail-title-2 .writer-text {
+        width: 30%;
+    }
+
+    .notice-detail-wrapper .notice-detail-title .notice-detail-title-2 .date-text {
+        width: 20%;
+    }
+
+    .notice-detail-content .notice-detail-img {
+        width: 100%;
+        
+    }
+
+    .notice-detail-content {
+        padding: 30px 50px;
+    }
+
+    .notice-detail-content h1 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .notice-detail-content p {
+        width: 100%;
+    }
+    /* End Notice Board Mobile */
+
+
+    /* Section banner */
+    #section-banner {
+        padding-top: 150px;
+        padding-bottom: 0px;
+    }
+
+    #section-banner .section-banner h1 {
+        font-size: 20px;
+    }
+
+    #section-banner .section-banner h3 {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    #section-banner .section-banner .image-container {
+        /* border-radius: 0; */
+        margin: 0 20px;
+    }
+
+    .quick-menu {
+        flex-direction: column;
+    }
+
+    .quick-menu .quick-menu-card {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .quick-menu .quick-menu-card .quick-menu-card-content a {
+        margin-bottom: 30px;
+    }
+
+    .quick-menu .quick-menu-card:nth-child(1),
+    .quick-menu .quick-menu-card:nth-child(2) {
+        border-bottom: 1px solid var(--sub-text-color);
+    }
+
+    /* End Section Banner */
+
+    /* School Rec */
+    #school-rec {
+        padding: 30px 10px;
+        margin-bottom: 0;
+        height: 100%;
+    }
+
+
+    #school-rec .school-rec > h1 {
+        font-size: 20px;
+    }
+
+    #school-rec .school-rec > h3 {
+        font-size: 14px;
+    }
+
+    .tab-content-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 5px;
+    }
+
+    .tab-content-grid {
+        gap: 10px;
+    }
+
+    .tab-content-grid .tab-content-card .tab-content-card-content h3 {
+        font-size: 10px;
+    }
+
+    .react-tabs__tab--selected {
+        border-radius: 0;
+    }
+    /* End School Rec */
+
+    /* School Detail Page Mobile */
+
+    .videobanner-wrapper {
+        flex-direction: column;
+    }
+
+    .schooldetailpage .schooldetailpage-video {
+        width: 100%;
+    }
+
+    .schooldetailpage .schooldetailpage-intro p {
+        width: 100%;
+    }
+
+    .schooldetailpage .schooldetailpage-card-wrapper {
+        flex-direction: column;
+    }
+
+    .schooldetailpage-card-wrapper .schooldetailpage-card {
+        margin: 0;
+    }
+    /* End School Detail Page Mobile */
+
+    /* Location Section */
+    #location-section {
+        padding: 50px 0;
+    }
+
+    #location-section .location-section h1 {
+        font-size: 20px;
+    }
+
+    #location-section .location-section h3 {
+        margin-bottom: 10px;
+    }
+
+    .location-section-wrapper {
+        flex-direction: column;
+    }
+
+    .location-section-wrapper .location-card-img {
+        height: 350px;
+    }
+    /* End Location Section */
+
+    /* Small Baneer */
+    .small-banner {
+        height: 80px;
+        width: 100%;
+        border-radius: 0;
+    }
+    /* End Small Baneer */
+
+    /* Footer */
+    #footer {
+        margin-bottom: 100px;
+    }
+
+    #footer .footer {
+        padding: 20px 0;
+    }
+    .footer .footer-sns-icon img {
+        width: 50px;
+    }
+
+    .footer .footer-sns-title h3 {
+        font-size: 10px;
+        text-align: center;
+    }
+
+    .footer .footer-sns-wrapper {
+        margin: 0 10px;
+    }
+
+    #footer .footer-content {
+        flex-direction: column;
+    }
+
+    #footer .footer-content .footer-logo {
+        margin-bottom: 30px;
+    }
+
+    #footer .footer-content .footer-text {
+        flex-direction: column;
+    }
+
+    #footer .footer-content .footer-text h3 {
+        width: 100%;
+        font-size: 12px;
+        text-align: center;
+    }
+    /* End Footer */
+
+    /* Singmate Home Mobile */
+    .singmatepage .singmatepage-banner {
+        border-radius: 0;
+    }
+
+    .singmatepage-intro .flex-row,
+    .singmatepage-intro .flex-row-reverse {
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .singmatepage-intro .singmate-intro-img,
+    .singmatepage-intro .singmate-intro-content {
+        width: 100%;
+    }
+
+    .singmatepage-intro .singmate-intro-content h1 {
+        font-size: 20px;
+    }
+
+
+    /* End Singmate Home Mobile */
+
+    /* Early Uhak Page Mobile */
+    .earlyuhakpage .earlyuhak-banner {
+        border-radius: 0;
+    }
+
+    #earlyuhakpage .earlyuhakpage .earlyuhakpage-content {
+        padding: 30px;
+    }
+
+    #earlyuhakpage .earlyuhakpage .earlyuhakpage-content p {
+        width: 100%;
+    }
+
+    .earlyuhakpage .earlyuhak-section-content h1 {
+        font-size: 18px;
+    }
+
+    .earlyuhakpage .earlyuhak-section-content h3 {
+        font-size: 15px;
+    }
+
+    .earlyuhakpage .earlyuhak-section-content .flex-row {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .earlyuhakpage .earlyuhak-section-content .earlyuhak-card {
+        width: 100%;
+    }
+    /* End Early Uhak Page Mobile */
+
+    /* University Page Mobile */
+    #universitypage .universitypage .universitypage-banner {
+        border-radius: 0;
+    }
+
+    #universitypage .universitypage .universitypage-content {
+        padding: 30px;
+        margin-top: 0;
+    }
+
+    #universitypage .universitypage .universitypage-content h1 {
+        font-size: 20px;
+    }
+
+    #universitypage .universitypage .universitypage-content h3 {
+        font-size: 15px;
+    }
+
+    #universitypage .universitypage .universitypage-content > p {
+        width: 100%;
+    }
+
+    .universitypage-content .private-uni-card-wrapper {
+        flex-direction: column;
+        margin: 0;
+        align-items: center;
+    }
+
+    .universitypage-content .private-uni-card-wrapper .private-uni-card {
+        height: 100%;
+    }
+
+    .private-uni-card-wrapper .private-uni-card .private-uni-card-title {
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+
+    .private-uni-card-wrapper .private-uni-card .private-uni-card-title img {
+        margin-right: 0;
+    }
+
+    
+    /* End University Page Mobile */
+
+
+    /* Language Course Mobile */
+    .languagecoursepage .languagecoursepage-banner {
+        border-radius: 0;
+    }
+
+    .languagecoursepage .dimension-row {
+        flex-direction: column;
+    }
+
+    .languagecoursepage .dimension-row .dimension-img {
+        width: 100%;
+        height: 300px;
+    }
+
+    .languagecoursepage .dimension-row .dimension-content {
+        width: 100%;
+    }
+
+    .languagecoursepage .dimension-row .dimension-content h1 {
+        font-size: 20px;
+    }
+    /* End Language Course Mobile */
+
+    /* Visit Form */
+    #visitsection .form-wrapper {
+        width: 100%;
+        border-radius: 0;
+        padding: 20px;
+        margin-bottom: 0;
+    }
+
+    .visitsection .form-title h1,
+    .form-wrapper h1 {
+        font-size: 26px;
+    }
+    /* End Visit Form */
+}
+/* End Mobile */
